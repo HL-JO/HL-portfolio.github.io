@@ -1,0 +1,506 @@
+/*importerer valgte fonter fra google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* 
+    (*) setter regler på alt 
+    innhold:
+    margin: 0; setter marginen til 0
+    padding: 0; setter paddingen til 0
+    box-sizing: border-box; setter boksen til border-box
+
+
+    Hva dette gjør:
+    elementene blir lettere å stilere og posisjonere fordi jeg kan være mer bevist på størrelsene til elementene i forhold til hverandre, 
+    størrelsen er da mer kontrolert, sånn at jeg ikke trenger inspiserverktøy til å se hva som skjer altså størrelsen til elementene jeg ikke har spesifisert.
+
+
+    Forklaring:
+    mairgin er avstanden fra kanten av elementet til andre elementer altså en usynelig ramme utenfor en ramme, 
+    dette skaper et utseende som gjør at elementene ikke er helt inntil hverandre
+    syntax:
+            top | right | bottom | left    
+    margin: 10px  20px     30px    40px;
+    margin-(top-left): ;
+
+    padding er fra elementinholdes kant til rammen altså en usynelig ramme innenfor en ramme 
+    altså en polstring som f.eks kan brukes til å utvide rekkeviden før en link er klikkbar
+
+    
+    standard kalkulasjonen til box-sizing: 
+    width + padding + border = faktisk bredde på et element
+    height + padding + border = faktisk høyde på et element
+    elementene kan ha ulik størrelse enn den spesifiserte bredden og høyden pga. padding og border størrelsen
+
+    border-box endrer kalkulasjonen til:
+    width(border+padding) = faktisk bredde
+    height(border+padding) = faktisk høyde
+    elementene inkluderer padding og border i den spesifiserte bredden og høyden sånn at elementene ser like store ut selv med forskjellig padding og border
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    Setter regler for alt som er i body elementet helt til det blir overskrivet med annen css kode
+    Innhold:
+    font-family: setter font skriften til poppins, sans-serif, Arial, Helvetica; (prioritert fra høyre til venstre) 
+    har netsiden ikke mulighet til å hente poppins fonten så vil den bruke neste font i rekkefølgen sans-serif, Arial, Helvetica;
+
+    background-color: setter bakgrunnsfargen til #f8deb776 (lys brun)
+    line-height: setter linje høyden til 1.5
+
+
+    Selektor verdier:
+    hvil musepekeren over body for å se selektor verdien til body (0,0,1) !important 100, 10, 1 dette er selektorverdier fra mins prioritert/høyre til mest viktig/venstre 
+    !important gjør at en spesifik css kode blir prioritert over andre css koder som er skrevet etter denne koden. Dette kan også gjøres med selektor verdien (x.x.x)
+    
+    selektor verdiene kan brukes til ha en generel kode for dokumentet sånn som jeg har gjort med reglene til body og *, så kan jeg bruke class som .hlogo med (0.1.0) 
+    dette forteller at denne kodens regler er viktigere enn reglene i body altså at reglene blir overskrivet til den viktigere koden
+*/
+body {
+    font-family: 'poppins', sans-serif, Arial, Helvetica,; 
+    background-color: #f8deb776;
+    line-height: 1.5;
+}
+
+/* 
+    regler for h1 taggen
+    innhold:
+    margin-top: setter toppen av marginen til 20px altså endrer ikke sidene eller bunnen av marginen 
+    dette kan brukes til å flytte elementer nedover eller lage avstand mellom elementer
+
+    text-align: center; sentrerer teksten
+
+    font-size: 3rem;
+    1rem har en px verdi iforhold til en nettlesers standard, de fleste nettlesere har 16px som standard så 3rem = 48px
+
+    color: #ffffff; setter fargen til hvit med hex kode
+
+    text-shadow legger til skygge på teksten
+    text-shadow syntax:
+              offset-x | offset-y | blur-radius | color
+    text-shadow: 1px        1px         2px       black;
+    først så hadde jeg #42fbf2 (veldig lys blå) men etterhvert innså jeg at det blir vanskelig for svaksynte å se lys på lys farger så jeg gjorde fargen mørkere
+*/
+h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 4px 4px 4px #1100ff;
+}
+
+/*dette er reglene for utsende av navbar i header taggen...............................................................................................*/
+
+/* 
+    alt i header taggen vil sitte fast(position: sticky;) på toppen (top: 0;) av siden til enhver tid
+    z-index: 1; setter z posisjonen til 1, dette gjør at elementet er foran andre elementer med lavere z posisjon
+*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* 
+    background-image: setter bakgrunnen til et element som i dette tilfellet en lineær gradient 
+    (to right setter den hvite fargen fra venstre til 17% av elementets bredde og den lyseblå fargen fra 17% til 100% av bredden)
+    jeg gjorde dette for å få en fin overgang fra hvit til lyseblå farge, i tilleg skulte jeg kantene på logoen som stak frem på en blå bakgrunn
+
+    text-align: right; setter linkene/knappene til høyre siden av elementet
+*/
+nav {
+    background-image: linear-gradient(to right, rgb(255, 255, 255) 17%, rgb(135, 206, 250) 100%);
+    text-align: right;
+}
+
+/*
+    Regler for å få logoen på venstre side av navbar
+    
+    display: inline-block; 
+    setter elementet til å være en blokk som gjør det mulig å stille inn en bredde og høyde på elementet og ha andre elementer ved siden av seg 
+    fordi det det er en block som ikke legger til et linjeskift (br) etter elementet
+    legge til margin/padding
+
+    margin-left: 12px; setter marginen på venstre side av elementet til 12px
+
+    float: left; setter elementet til å flyte til venstre siden av elementet
+
+    SN:
+    når jeg bruker float vil ikke logo og linkene være på samme linje, fordi float setter elementet til å flyte til venstre siden av elementet
+    dette løste jeg lett med å sette størrelse på linkene til logoens størrelse men
+    et nytt problem kom da jeg så at logoen var trykt inn i venstre gjørne av siden, dette løste jeg med å sette margin-top: 12px; og margin-left: 12px;
+    
+    jeg kunne forkortet margin-top og margin-left til margin: 12px 0 0 12px
+*/
+.hlogo {
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 12px;
+    float: left
+}
+
+/* 
+    spesifisert bredde og høyde på knappene
+    border: none; fjerner rammen rundt knappen 
+    background-color: #42fbf2; setter bakgrunnsfargen til knappen til lys blå for å blande seg inn i bakgrunnen
+    border-radius: 4px; setter avrundingen på kantene til 4px
+    
+    box-shadow: inset 0 0 0 0 #051144; setter skyggen til 0 0 0 0 og fargen til #051144
+    inset presser skyggen innover boksen
+    syntax: offset-x, offset-y, blur-radius, spread-radius
+
+    transition: ease-out 0,9s; setter overgangen til 0,9 sekunder
+    outline: none; fjerner den blå fargen og underlinjen rundt knappen når den er klikket på
+    
+    SN: box-shadow har ingen px verdi fordi dette setter knappen opp for en liten animasjon
+ */
+.btn-1 {
+    width: 150px;
+    height: 85px;
+    border: none;
+    color: white;
+    background-color: lightskyblue;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #051144;
+    transition: ease-out 0,9s;
+    font-size: 2rem;
+    outline: none;
+}
+
+/*
+    :hover er en pseudo klasse som gjør at du kan endre reglene på et element når du hviler musepekeren over elementet
+    teksten settes til svart
+    boks skyggen settes med 300px 0 0 0 men pga. inset vil skyggen bli presset innover boksen
+    det legges til en ramme
+    med overgang vil rammen se ut som om den kommer fra kantene av knappen og boks skyggen gå fra venstre til høyre
+    mange effekter kan lages med evt. fargene fra denne og den forige koden
+    overgangene blir satt sammen altså animasjonen tar 1,8 sekunder
+
+    cursor: pointer; setter musepekeren til en hånd når du hviler musepekeren over knappen
+ */
+.btn-1:hover {
+    box-shadow: inset 300px 0 0 0 #42fbf2;
+    transition: ease-out 0.9s;
+    cursor: pointer;
+    border: 5px solid #0025cd;
+    color: black;
+}
+/*Nav bar forklaring slutt.............................................................................................................*/
+
+/* slideshow...........................................................................................................................*/
+.container {
+   /*vmin = viewport minimum eks. veiw port = 1000px wide 800px high, 30vmin, 30% of height.*/
+    width: 85vmin; 
+
+    /* 
+        setter et element til å posisjoneres relativt til sin normale plassering, slik at det kan justeres med top-left uten å forlate dokumentflyten
+        marginen dytter slideshowet ned under h1 (forhindring av overlapping) og drar footeren opp, behagelig under slideshowet
+    */
+    position: relative;
+    margin-top: 260px;
+    margin-bottom: -385px;
+
+    /* flytter et element 50% til venstre og 50% opp fra sin opprinnelige posisjon, ofte brukt for å sentrere elementer.  */
+    transform: translate(-50%, -50%); 
+
+    /* dytter slideshowet i midten */
+    left: 50%;
+
+    /* overflow: hidden; hindrer at bildene dukker opp utenfor containeren som gjør at bildene ikke ødeleger siden*/
+    overflow: hidden;
+
+    border-radius: 8px;
+    box-shadow: 5px 10px 10px #0059FF;
+}
+
+.wrapper {
+    width: 100%;
+    
+    /*bildene plaseres vannrett etterhverandre (inholde kan gå ut av siden) */
+    display: flex; 
+
+    /* 
+        dette er den korte måten å sette in animation tagen
+        animation: nøkkelordet til animasjonen, varigheten på animasjonen, antall ganger animasjonen skal spilles
+    */
+    animation: slide 16s infinite;
+}
+
+/* 
+    @keyframes brukes i CSS for å skape animasjoner ved å definere stiler på spesifikke punkter gjennom animasjonens varighet(%).
+    slide er nøkkelordet på animasjonen
+    her har jeg stilt inn kordinatene for prosentdelene av animasjonen mens den går
+    animasjonen går fra 0% til 100% mellom en tidsramme som jeg har lagt til å vare i 16 sekunder
+
+    NB! 
+    animasjonne kan kun ha 6 bilder, du må balansere med prosentdelene for å få en jevn overgang mellom bildene som ligger 
+    egentlig vannrett etterhverandre med en posisjon fra 0 til -500% 
+*/
+@keyframes slide {
+
+    0% {
+        transform: translateX(0);
+      }
+
+
+      10% {
+        transform: translateX(0);
+      }
+
+
+      20% {
+        transform: translateX(-100%);
+      }
+    
+
+      30% {
+        transform: translateX(-100%);
+      }
+
+
+      40% {
+        transform: translateX(-200%);
+      }
+    
+
+      50% {
+        transform: translateX(-200%);
+      }
+
+
+      60% {
+        transform: translateX(-300%);
+      }
+
+
+      70% {
+        transform: translateX(-300%);
+      }
+
+
+      80% {
+        transform: translateX(-400%);
+      }
+
+
+      85% {
+        transform: translateX(-400%);
+      }
+
+
+      100% {
+        transform: translateX(-500%);
+      }
+
+    }
+
+.wrapper img {
+    width: 100%;
+}
+/* slideshow slutt.....................................................................................................................*/
+
+
+/* Footer..............................................................................................................................*/
+.fcontainer {
+    max-width: 1170px;
+    margin: auto;
+    width: 100%;
+}
+
+.frow {
+    display: flex;
+    
+    /* istedenfor at det ligger vannrett etterhverandre kan innhold pakke seg under hverandre istedenfor å gå videre ut av siden */
+    flex-wrap: wrap;
+}
+
+.ful {
+    /* fjerner listedetaljer som ordered (1-etc.) og unorderedlist (punkt) */
+    list-style: none;
+}
+
+.footer {
+    background-color: #2F539B;
+    /* glatt overgang for popping effekt etterhvert med hover på a elementene */
+    transition: transform 0.3s ease-in-out; 
+    
+    /* flytter på y aksen */
+    transform: translateY(100%);
+}
+
+.footer-col {
+    width: 25%;
+    /* setter sidene med 15px padding */
+    padding: 0 15px;
+}
+
+.fmiddle {
+    /* jeg bruker dette til å mitstille kolonene */
+    margin: 0 130px 0 150px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fffefe;
+
+    /* 
+        text-transform lar deg spesifisere bruken av store og små bokstaver i et element (alle store, alle små eller stor bokstav i starten av hvert ord)
+        text-transform: capitalize; setter første bokstav i hvert ord til stor bokstav
+    */
+    text-transform: capitalize;
+    
+    /* 
+        justerer tykkelsen på teksten
+        du kan bruke nøkkelord som bold eller normal
+        numeriske verdier far 1-1000
+    */
+    font-weight: 500;
+
+    margin-bottom: 35px;
+    position: relative;
+    text-align: center;
+}
+
+.footer-col h4::before {
+    
+    /* lar deg legge in innhold som ikoner eller ingenting som lar meg lage streken under h4 teksten sammen med resten av koden under */
+    content: '';
+
+    /* streken lages ved å manipulere en bakgrunn farge og bruke position absolute til å legge det på h4, så høyde for tykkelse og bredde for lengde */
+
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #ffffff;
+    height: 2px;
+    width: 310px;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    
+    /* fjerner dekorasjon på teksten som underline */
+    text-decoration: none;
+
+    font-weight: 300;
+    color: #ffffff;
+    display: block;
+
+    /* glatt overgang når det legges til hover */
+    transition: all 0.3s ease;
+}
+
+/* dette er poping effekten */
+.footer-col ul li a:hover {
+    color: #00eeff;
+    padding-left: 8px;
+}
+
+.visit-us {
+    display: flex;
+
+    /* 
+        justify-content definerer hvordan nettleseren fordeler plassen mellom og rundt 
+        innholdselementer langs hovedaksen (difineres av flex-direction) til en fleksibel beholder, og den innebygde aksen til en rutenettbeholder
+        justify-content: space-between; setter plassen mellom elementene til å være lik
+
+        align-items definerer hvordan nettleseren justerer innholdselementer langs tverraksen av en fleksibel beholder
+    */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5 ease;
+}
+
+.footer-col .social-links {
+    display: flex;
+    
+    /* sentrerer gjenstander horisontal */
+    justify-content: center; 
+    
+    /* sentrerer gjenstander vertikal */
+    align-items: center; 
+
+    flex-wrap: wrap; 
+
+    /* avstand mellom rader og mellom koloner til 10px */
+    gap: 10px;
+}
+
+.footer-col .social-links .facebook:hover {
+    color: #ffffff;
+    background-color: #316FF6;
+}
+
+.footer-col .social-links .youtube:hover {
+    color: #ff0000;
+    background-color: #ffffff;
+}
+
+.footer-col .ful p {
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.footer-col .ful p .tel {
+    /* setter en linje under teskten (jeg ) */
+    text-decoration: underline;
+}
+
+.footer-col .ful .email {
+    text-decoration: underline;
+}
+
+.tt {
+    justify-content: center;
+    align-items: center;
+    margin-top: 169px;
+    margin-left: 50px;
+}
+
+.tt-btn {
+    text-decoration: none;
+    background-color: #2F539B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+    medie er en responsive regel som lar deg optimalisere siden for mobilbrukere som ha mindre og stående skjermer enn desktop brukere
+    
+    SN:
+    pga. endringer med tre koloner istedenfor fire har jeg ødelagt optimaliseringen med fmiddle
+    Jeg har ikke nok erfaring til å fikse dette uten å ødelegge det øsnkede designet for desktop brukere
+*/
+@media(max-width: 767px) {
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;}
+}
+
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%;}
+}
+/* Footer slutt..............................................................................................................................*/

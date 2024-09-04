@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Kalles bokhandel</title>
+
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="kalles-bok-base.css"> <!-- felles stilerung for navbar og footer -->
+    <link rel="stylesheet" href="kalles-bok-style.css"> <!-- spesifik stilering for denne filen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="kalles-bok.js" defer></script>
+</head>
+
+<body>
+
+    <!-- 
+        Kontainer som holder navbaren på toppen av nettsiden i en fikset posisjon, da vil den ikke følge dokumentflyten og innhold, dette dytter main under navbaren
+        Header som skall lage bakgrunns høyde relevant til Kontaineren høyde ved hjelp av js
+    -->
+    <header class="navbar-wrapper"> <!-- header -->
+
+        <nav class="navbar" id="navbar"> <!-- kontainer -->
+            
+            <!-- plasering av innholdet i navbaren med link til hovedside og bestill -->
+            <div class="navbar-container"> 
+                <a href="kalles-bok.html">
+                    <img src="icon.png" alt="Kalles bokhandel logo">
+                </a>
+                
+                <h1 class="nav-title">Velkommen til Kalles bokhandel</h1>
+
+                <a href="bestil.html" class="btn">Bestil</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- class="t-" = tabell -->
+        <table class="t1">
+
+            <!--
+                Brukes som en fin topp på tabelen ved hjelp av linær bakgrunn i style.css
+                NB! colspan="3" brukes for å fylle hele bredden av tabellens koloner som i dette tilfellet er 3
+            -->
+            <thead>
+                <tr>
+                    <th colspan="3" ></th>                    
+                </tr>
+            </thead>
+    
+            <!-- kroppen til tabelen med en tabell rad (tr) og tabell data celler (td) som er kolonnene -->
+            <tbody>
+                <tr>
+                    <td>
+                        <h2 class="t-titles">Udåden</h2>
+                        <a href="udaaden.html">
+                        <img class="klikkbar" src="udaaden.jpg" alt="bildet av boken Udåden" width="200" height="300">
+                        </a>
+
+                        <div class="t-txt">
+                            <p class="t-txtp">Karen Støylen</p>
+                            <p class="t-txtp"><b>Pris</b>: 100 kr</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <h2 class="t-titles">Den eneste rette</h2>
+                        <img src="denenesterette.jpg" alt="bildet av boken Den eneste rette" width="200" height="300">
+                        
+                        <div class="t-txt">
+                            <p class="t-txtp">Jenny Micko</p>
+                            <p class="t-txtp"><b>Pris</b>: 100 kr</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <h2 class="t-titles">Der det er hjerterom</h2>
+                        <a href="hjerterom.html">
+                        <img class="klikkbar" src="derdeterhjerterom.jpg" alt="bildet av boken Der det er hjerterom" width="200" height="300">
+                        </a>
+
+                        <div class="t-txt">
+                            <p class="t-txtp">Elisabeth Hammer</p>
+                            <p class="t-txtp"><b>Pris</b>: 100 kr</p>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <h2 class="t-titles">Gravkryptenes hemmelighet</h2>
+                        <img src="gravkruptenshemmelighet.jpg" alt="bildet av boken Gravkryptens hemmelighet" width="200" height="300">
+                        
+                        <div class="t-txt">
+                            <p class="t-txtp">May Lis Ruus</p>
+                            <p class="t-txtp"><b>Pris</b>: 100 kr</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <h2 class="t-titles">Olea - født på Oslodagen</h2>
+                        <img src="Olea.jpg" alt="bildet av boken Olea - født på Oslodagen" width="200" height="300">
+                        
+                        <div class="t-txt">
+                            <p class="t-txtp">Synnøve Eriksen</p>
+                            <p class="t-txtp"><b>Pris</b>: 100 kr</p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <h2 class="t-titles">Gullburet</h2>
+                        <img src="gullburet.jpg" alt="bildet av boken Gullburet" width="200" height="300">
+                        
+                        <div class="t-txt">
+                            <p class="t-txtp">Trine Angelsen</p>
+                            <p class="t-txtp"><b>Pris</b>: 100 kr</p>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+    
+        </table>
+        
+    </main>
+    
+    <!-- f = footer -->
+    <footer class="footer">
+        <div class="fcontainer">
+            <div class="frow">
+                
+  
+                <div class="footer-col">
+  
+                    <h4>kontakt oss</h4>
+                    <ul class="ful">
+                        <li>
+                            <a href="mailto:kallesbok@gmail.com" class="underline"><i class="fas fa-envelope"></i> e-post</a> 
+                        </li>
+                    </ul>
+                </div>
+  
+                <!-- brukes til å holde strukturen i tre deler sånn at det blir et fint mellomrom i midten -->
+                <div class="footer-col">
+  
+                    <ul class="ful">
+                        
+                    </ul>
+                </div>
+  
+                
+                <div class="footer-col">
+  
+                    <h4>Følg oss</h4>
+                    <ul class="ful">
+                        <div class="social-links">
+                            <!-- i taggene er sosiale ikoner fra cdn awsomefonts -->
+                            <a class="facebook" href="https://www.facebook.com/profile.php?id=61559013170119" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="youtube" href="https://www.youtube.com/@Kallesbokhandel" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="CR">
+            <p>Copyright © 2024 Kalles bokhandel</p>
+        </div>
+  
+    </footer>
+</body>
+</html>

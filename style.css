@@ -1,0 +1,135 @@
+
+
+.pf-container {
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 5svh auto 12svh auto;
+    padding: 15px 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 6px 6px 16px 4px #89253e, 8px 8px 18px 6px #cb2d3e, 10px 10px 20px 8px #ef473a;
+}
+
+.pf-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    color: 24262b;
+    margin: 0.5em auto;
+    text-shadow:
+  0 0 2px #ff0000,
+  0 0 5px #ff0000,
+  0 0 15px #ff0000,
+  0 0 20px #ff0000;
+}
+
+.pf-intro {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pf-intro img {
+    margin-left: 10px;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 15px 3px #ff8585; */
+}
+
+.pf-txt {
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 1.5em;
+}
+
+.pf-outro {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+@media (max-width: 875px) {
+
+    .pf-container {
+        width: 70vw;
+    }
+
+    .pf-title {
+        font-size: 1.9em;
+    }
+
+    .pf-txt {
+        
+        font-size: 1.1em;
+    }
+
+    .pf-outro {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 742px) {
+
+    .pf-container {
+        width: 80vw;
+    }
+
+    .pf-title {
+        font-size: 2em;
+    }
+
+    .pf-txt {
+        font-size: 1.6em;
+    }
+
+    .pf-outro {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 623px) {
+
+    .pf-title {
+        font-size: 1.9em;
+    }
+
+    .pf-txt {
+        font-size: 1.2em;
+    }
+
+    .pf-outro {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 491px) {
+
+    .pf-title {
+        font-size: 1.5em;
+    }
+
+    .pf-txt {
+        font-size: 0.9em;
+    }
+
+    .pf-outro {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .pf-title {
+        font-size: 1.1em;
+    }
+
+    .pf-txt {
+        font-size: 0.8em;
+    }
+
+    .pf-outro {
+        font-size: 0.8em;
+    }
+}

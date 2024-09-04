@@ -1,0 +1,119 @@
+
+/* h1 {
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  margin: 10px auto;
+  text-align: center;
+  color: #000;
+  text-shadow: 0 1px 2px #FF0000;
+} */
+
+.card-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  border: 1px solid #e3e3e3;
+  margin: 5px 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  display: block;
+  width: 300px;
+  height: 168px;
+    background-color: #f0f0f0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .card-body {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .card-title {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .card-text {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .btn {
+    display: inline-block;
+    width: 50%;
+    justify-self: center;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0 #ffffffff;
+    transition: ease-out 1s;
+  }
+  
+  .btn-primary {
+    background-color: #0c1d37;
+    color: white;
+  }
+
+  /* Card unik effekt ...................................................................................................................................*/
+
+  /* Nettsider */
+  .YX {
+    background-image: url("yx-stasjon.png");
+    background-color: #24262b;
+  }
+
+  .YX-forlatt {
+    background-image: url("YX.png"), linear-gradient(to right, rgb(255, 0, 0) 4%, rgb(255, 255, 255) 50%);
+  }
+  
+  .btn-YX:hover, .btn-YX:focus {
+    box-shadow: inset 0 0 0 200px #ff0000;
+    background-color: #000000b4;
+    transition: ease-out 1s;
+  }
+
+  .Høn-vgs {
+    background-image: url("Hon-vgs.png"), linear-gradient(to right, rgb(255, 255, 255) 17%, rgb(135, 206, 250) 100%);
+  }
+
+  .btn-Høn-vgs:hover, .btn-Høn-vgs:focus {
+    box-shadow: inset 0 0 0 200px #87cefa;
+    background-color: #000000b4;
+    transition: ease-out 1s;
+  }
+
+  .Kalles-bok {
+    background-image: url("kalles-bok.png"), linear-gradient(#000000b4,#ff00005d)
+  }
+
+  .btn-kalles-bok:hover, .btn-kalles-bok:focus {
+    box-shadow: inset 0 0 0 200px #ff00005d;
+    background-color: #000000b4;
+    transition: ease-out 1s;
+  }
+
+  /* IT relaterte oppgaver */
+  .serv-2022 {
+    background-image: url("serv-2022.png");
+    background-color: white;
+  }

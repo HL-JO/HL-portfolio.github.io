@@ -1,0 +1,146 @@
+* {
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+.nav-title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ff0000;
+    animation: neonAnim 2s alternate-reverse infinite;
+}
+
+@keyframes neonAnim {
+    from {
+        text-shadow:
+          0 0 10px rgba(255, 0, 0, .7),
+          0 0 40px rgba(255, 0, 0, .7),
+          0 0 100px rgba(255, 0, 0, .7);
+      }
+      to {
+        text-shadow:
+          0 0 5px rgba(255, 0, 0, 0.7),
+          0 0 20px rgba(255, 0, 0, .7),
+          0 0 60px rgba(255, 0, 0, .7);
+      }
+}
+
+
+.t1 {
+    width: 75%;
+    margin: 2.5em auto;
+    font-size: 20px;
+    border-collapse: collapse; 
+    box-shadow: 0 20px 20px #ABB2B9;
+    border-radius: 25px;
+    overflow: hidden; 
+}
+
+/* setter regler for tabell radene (tr) i thead */
+.t1 thead tr {
+    background-image: linear-gradient(#810000, #000000);
+}
+
+/* regler for størrelse og tekstjustering hver kolone */
+.t1 th, .t1 td {
+    padding: 12px 20px;
+    text-align: center;
+}
+
+/* :nth-child(even) skaper bakgrunn på kolonene i partal altså kolone 2, 4, 6, osv. */
+.t1 tbody tr:nth-child(even) {
+    background-image: linear-gradient(#ff00005d, #000000);
+}
+
+/* :nth-child(odd) samme som over bare med oddetall altså kolone 1, 3, 5, 7 */
+.t1 tbody tr:nth-child(odd) {
+    background-image: linear-gradient(#000000b4,#ff00005d);
+}
+
+/* :last-of-type lar oss endre det siste elementet i en kode uten å pavirke de andre altså påvirker den nederste tr taggen i tabelen  */
+.t1 tbody tr:last-of-type {
+    border-bottom: 8px solid #ff8c8c;
+}
+
+.t1 tbody td:hover {
+    border-top: 2px solid rgb(255, 0, 0);
+}
+
+.t-titles {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0.2em;
+    text-shadow:
+          0 0 10px rgba(255, 0, 0, .7),
+          0 0 40px rgba(255, 0, 0, .7),
+          0 0 100px rgba(255, 0, 0, .7);
+}
+
+.t-txt, .t-txtp {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 7px;
+    margin: 0.2em auto;
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.klikkbar {
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .t1 {
+        width: 100%; 
+        margin: 10px auto; 
+        font-size: 16px; 
+    }
+
+    .t1 thead th {
+        display: block; 
+        width: 100%; 
+    }
+
+    .t1 tbody, .t1 tbody tr {
+        display: block; 
+    }
+
+    .t1 td {
+        display: block; 
+        text-align: center; 
+        padding: 10px; 
+    }
+
+    .t1 td:before {
+        /* Use this to add labels before each cell in case headers are important */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px; 
+    }
+
+    /* Adjust the clickable image size on smaller screens */
+    .klikkbar {
+        height: auto;
+    }
+}
+
+@media (max-width: 280px) {
+    .navbar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-title {
+        font-size: 14.5px;
+        margin: 10px 0;
+    }
+}

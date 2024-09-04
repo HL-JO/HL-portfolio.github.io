@@ -1,0 +1,257 @@
+<!-- forteller nettleseren hvilken dokument type som kommer -->
+<!DOCTYPE html>
+
+<!-- spesifiserer elementenes innhold -->
+<html lang="no">
+
+<!-- 
+    Er som en kontainer med metadata(data om data), 
+    dette kan inneholde link til css og js dokumenter/filer, dokument titel, tegnsett, og andre meta data 
+-->
+<head>
+    
+    <!--Støtter æøå/norsk tegnsett-->
+    <meta charset="UTF-8">
+
+    <!--Denne koden optimaliserer størrelsen på en nettside ut ifra enhetens skjerm-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Titelen på nettsiden oppe i fanen-->
+    <title>Hønefoss videregående skole</title>
+
+    <!--linker til et bilde man kan bruke som et icon oppe i fanen på nettsider-->
+    <link rel="shortcut icon" href="buskerud_fylkeskommune_logo.jpeg" type="image/x-icon">
+
+    <!--Linker til CSS-filen-->
+    <link rel="stylesheet" href="honefoss.css">
+
+    
+    <!-- linker til sosiale logoer for footer fra en url i font awsome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<!-- Kontainer for all innholdet i dokumentet, dette kan inneholde headings, paragrafer, bilder, huperlinks, tabeler, lister, etc. -->
+<body>
+    
+    <!-- 
+        Header virker som innledende innhold eller en navigasjonsbar med linker til andre html filer eller nettsider
+        Her bruker jeg header til å feste en navigasjonsbar i toppen av nettsiden med css (see css for videre forklaring). 
+        Navigasjonsbar er felles for alle menyer i toppen av en nettside
+    -->
+    <header>
+
+        <!--
+            Nav står for navigasjon og er ment for hovedblokker med navigasjonslenker
+            Nettlesere for funksjonshemmede brukere, 
+            kan bruke dette elementet til å bestemme om den første gjengivelsen av dette innholdet skal utelates
+            
+            NB!
+            ikke alle lenker til et dokument skal være inne i et nav element.
+        -->
+        <nav>
+
+            <!--
+                div brukes som en kontainer til å dele kodene, sånn at du kan stilere eller manipulere kodene med css eller javascript 
+                det lar deg enkelt stilere med å bruke id (#) og class (.) tagene
+
+                hlogo = headerlogo
+                
+                NB!
+                Nettlesere putter linjebrek/linebreak (br) foran og bak et div element som standard 
+            -->
+            <div class="hlogo">
+                
+                <!--
+                    her har jeg lagt en hyperlink i et bilde,
+                    a står for anchor/anker og brukes som en hyperlink til å sende deg til et annet dokument eller nettleser
+                    i dette tilfelet er det til hovedsiden/dokument
+                -->
+                <a href="honefoss.html">
+
+                    <!--
+                        img står for image/bilde og brukes til å legge inn et bilde på nettsiden
+                        størrelsen er ferdigstilt sånn at nettsiden går raskere og lettere når siden lastes in 
+                    -->
+                    <img src="Honefoss vgs.jpg" alt="Hønefoss vgs logo og link til hjemmeside"  width="275" height="60">
+                </a>
+            </div>
+        
+            <!--
+                her har jeg linkene som skal være i navigasjonsbaren som skal gå til de andre sidene/dokumentene
+
+                btn-1 = button-1
+            -->
+                <a href="om-honefoss-vgs.html"><button class="btn-1">Om oss</button></a>
+            
+                <a href="1IMA.html"><button class="btn-1">1IMA</button></a>
+                
+               <a href="2ITA.html"><button class="btn-1">2ITA</button></a>
+            
+                <a href="Kantina.html"><button class="btn-1">Kantina</button></a>
+
+        </nav>
+
+    </header>
+
+    <!--
+        main er hovedinholdet i et dokument
+        ikke inneholde noe innhold 
+        som gjentas på tvers av dokumenter 
+        som sidefelt, navigasjonslenker, informasjon om opphavsrett, nettstedslogoer og søkeskjemaer
+        
+        NB! 
+        Det kan ikke være mer enn ett <main>-element i dokumentet 
+        <main>-elementet må IKKE være en etterkommer av et <article>-, <aside>-, <footer>-, <header>- eller <nav>-element.
+    -->
+    <main>
+
+        <!-- 
+            heading (1-6) taggen er en tag som brukes til å lage overskrifter i dokumentet
+        -->
+        <h1>Hønefoss videregående skole</h1>
+
+        <!-- 
+        Dette er html koden brukt til slideshow
+        to deler med div. En kontainer og en wrapper for css stilering som lager slideshowet
+        -->
+        <div class="container">
+            <div class="wrapper">
+                <img src="1.jpg"      alt="Framsiden av skolen">
+                <img src="2.jpg"      alt="Hovedtrapp"         >
+                <img src="3.jpg"      alt="Reseption"          >
+                <img src="5.jpg"      alt="bibliotek"          >
+                <img src="4,5.jpg"    alt="Kantine"            >
+                <img src="4.jpg"      alt="Kantine spisested"  >
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- 
+        Definerer footeren til et dokument eller en seksjon
+        du kab ha flere footere i et dokument
+        Dette er koden til footeren med fire class hoved indelinger som er footer, fcontainer, frow og footer-col
+
+        En footer kan inneholde:
+        forfatterinformasjon
+        informasjon om opphavsrett
+        kontaktinformasjon
+        nettstedskart
+        tilbake til toppen lenker
+        relaterte dokumenter
+
+        class="(insert)" forkortelser:
+        fcontainer = footer container
+        frow = footer row
+        footer-col = footer column
+        ful = footer unordered list
+        fmiddle = footer middle
+        tt = til toppen
+        tt-btn = til toppen knapp
+    -->
+    <footer class="footer">
+        <div class="fcontainer">
+            <div class="frow">
+                
+                <!-- 1 av 3 unomurert liste koloner....................................................................-->
+                <div class="footer-col">
+
+                    <h4>Kontakt oss</h4>
+
+                    <!--
+                        ul = unordered list og er en liste uten nummerering altså punktliste
+                        li = list item og brukes for å legge til linjer i en liste
+                     -->
+                    <ul class="ful">
+                        
+                        <!-- 
+                            Jeg har lagt alle listeelementene i en a tag, 
+                            selv de som ikke er linker for å lage en hover effekt på innholdet
+                            
+                            disse liste-elementene er for 
+                            automatisk telefon samtale ved klikk (virker ikke ennå), 
+                            automatisk fra: din e-post og til
+                            post-adressen til skolen
+                        -->
+
+                        <li>
+                            <p>
+                                Telefon
+                                <a class="tel" href="#">31 00 27 00</a>
+                            </p>
+                        </li>
+
+                        <li>
+                            <a class="email" href="mailto:honefossvgs@bfk.no" data-id="31424">
+                                <i class="fas fa-envelope"></i> e-post</a>
+                        </li>
+
+                        <li>
+                            <a>Hønefoss videregående skole<br>Postboks 3084<br>3501 Hønefoss</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <!-- 2.................................................................................................-->
+                <!-- her ser du en dobbel classering, dette har reglene for footer-col men 
+                    i tilleg har dette elementet med regler fra fmiddle 
+                    som gjør at jeg kan legge til mer regler for akurat dette elementet -->
+                <div class="footer-col fmiddle">
+
+                    <h4>Følg oss</h4>
+
+                    <!-- 
+                        Her legges det to linker til facebook og youtube sidene til skolen, men istedenfor text
+                        er det lagt til ikoner fra font awsome cdn (se head for link til font awsome cdn) 
+                        
+                        Dette linker direkte til en css side på nettet med ikoner og mer css (som jeg forstår og leser det)
+                        jeg ser dette ved å se . {} : ; og etc. eller
+                        trykke på linken og lese fra https://...../css/all.min.css 
+                        (/css/ ser ut til å komme i en css mappe hentet i nettsiden cdnjs.cloudflare.com og filnavnet er all.min.css) 
+                        jeg kom til denne forklaringen ved å lese http://127.0.0.1:5500/Index.html når jeg åpner html dokumentene mine
+                    -->
+                    <div class="social-links">
+                        <a class="facebook" href="https://www.facebook.com/honefossvgs/" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                        <a class="youtube" href="https://www.youtube.com/channel/UCofJxfBGd_EC9cDYQeDxV1g" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    
+                    <div class="tt">
+                        <a class="tt-btn btn-1" href="honefoss">Til Toppen</a>
+                    </div>
+                </div>
+
+                <!-- 3.................................................................................................-->
+                <div class="footer-col">
+                    <h4>Besøk oss</h4>
+                    <ul class="ful">
+
+                        <!-- her har jeg lagt in adresse og åpningstider -->
+
+                        <li>
+                            <a href="">Osloveien 17 _ 3511 Hønefoss</a>
+                        </li>
+
+                        <li> 
+                            <a href="">Mandag–fredag _ kl. 08.00–15.30</a>  
+                        </li>
+                        
+                        <!-- 
+                            iframe spesifiserer en innebygd ramme som kan brukes til å legge in en interaktiv facebook feed, kart, etc 
+                            
+                            NB! 
+                            title atributen er brukt av skjermlesere for å lese innholdet i iframe elementet
+                        -->
+                        <li>
+                            <iframe title="Et interaktiv kart over Hønefoss videregående skole" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.414193823205!2d10.252638776715008!3d60.15732174447132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641073e8102155d%3A0x4fe03632da0299ba!2sH%C3%B8nefoss%20high%20school!5e0!3m2!1sen!2sno!4v1707325078193!5m2!1sen!2sno" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

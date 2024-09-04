@@ -1,0 +1,128 @@
+
+h1 {
+    font-size: 3em;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    margin: 10px auto;
+    text-align: center;
+    color: #000;
+    text-shadow: 0 1px 2px #FF0000;
+}
+
+.txt-container {
+    display: grid;
+    gap: 30px;
+    grid-template-rows: repeat(2, 1fr);
+    width: 70%;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    line-height: 1.5em;
+    margin: 50px auto;
+    padding: 15px 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.card-contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+}
+
+.card {
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  border: 1px solid #e3e3e3;
+  margin: 5px 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  display: block;
+  width: 300px;
+  height: 168px;
+  background-color: #f0f0f0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-body {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-title {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.card-text {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 0 #ffffffff;
+  transition: ease-out 0.5s;
+}
+
+.btn-primary {
+  background-color: #0c1d37;
+  color: white;
+}
+  
+
+  /* Card unik effekt ...................................................................................................................................*/
+
+  .HTML {
+    background-image: url("HTML.jpg");
+  }
+
+  .btn-HTML5:hover, .btn-HTML5:focus {
+    box-shadow: inset 0 0 0 200px #E44D26;
+    transition: ease-out 1.5s;
+  }
+
+  .CSS {
+    background-image: url("CSS.webp");
+  }
+
+  .btn-CSS:hover, .btn-CSS:focus {
+    box-shadow: inset 0 0 0 200px #264de4;
+    transition: ease-out 1.5s;
+  }
+
+  .JS {
+    background-image: url("JS.jpg");
+  }
+
+  .btn-JS:hover, .btn-JS:focus {
+    box-shadow: inset 0 0 0 200px #f7df1e;
+    transition: ease-out 1.5s;
+  }
+
+  /* media...............................................................................................................................................*/
+  @media (max-width: 400px) {
+    .txt-container {
+      width: 90%;
+      font-size: 1.2em;
+    }
+  }

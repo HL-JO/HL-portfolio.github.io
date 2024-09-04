@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Om oss</title>
+
+    <link rel="stylesheet" href="om-honefoss-vgs.css">
+    <link rel="shortcut icon" href="buskerud_fylkeskommune_logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    
+<header>
+    <nav>
+
+        <div>
+            <a href="honefoss.html">
+                <img src="Honefoss vgs.jpg" alt="Hønefoss vgs logo"  width="275" height="60">
+            </a>
+        </div>
+
+            <a href="om-honefoss-vgs.html"><button class="btn-1">Om oss</button></a>
+
+            <a href="1IMA.html"><button class="btn-1">1IMA</button></a>
+            
+           <a href="2ITA.html"><button class="btn-1">2ITA</button></a>
+
+            <a href="Kantina.html"><button class="btn-1">Kantina</button></a>
+            
+    </nav>
+</header>
+    
+<main>
+
+    <h1>Om Hønefoss VGS</h1>
+
+    <!-- 
+        en lett måte å legge in videoer er <video src=""></video> som du trenger vid link fra nett eller 
+        embed funksjon og VideoID fra youtube (høre klikk på yt-vid så stats for nerds finn VideoID) 
+        Koden er <iframe src="https://www.youtube.com/embed/(VideoID)" width="500" height="300"></iframe>
+
+        men her viser jeg et mer kodet alternativ som trenger nedlastede videoer og undertekster (da vil ikke videoene forsvinne, om de eksterne videoene tas ned fra nettet)
+
+        vid = video
+        class bruker for å stilere en ramme og posisjonen iforhold til andre elementer
+        ferdiginstilt størrelse på 995x560 for å best få alt inholde uten å lage tomrom innenfor video rammen
+        
+        så har jeg lagt in kontroler for å gi brukeren kontroll over videoen med valg muligheter 
+        (som jeg kan legge til med html, som er play, lyd, fullskjerm, hastighet, nedlast, bilde i bilde og undertekster. skule jeg ha lagt til mer trengre jeg javascript)
+
+    -->
+    <video
+    class="vid"
+    width="995"
+    height="560"
+    controls>
+    
+    <!-- diverse kilder med forskjellige oppløsninger prioriterer fra top til bunn (får ikke lagt inn opløsningskontrol for brukere) -->
+    <source src="1080p.mp4"   type="video/mp4">
+    <source src="720p.mp4"    type="video/mp4">
+    <source src="360p.mp4"    type="video/mp4">
+    <source src="144p.mp4"    type="video/mp4">
+
+    <!-- track brukes til å sette inn undertekst men det har ikke denne videoen, 
+        koden gir valgmuligheter når du setter kontroler på videoen
+
+    <track 
+        src="" 
+        kind="captions" 
+        label="English" 
+        srclang="en">
+    <track 
+        src="" 
+        kind="captions" 
+        label="Norsk" 
+        srclang="no"
+        default>-->
+
+    </video>
+
+    <!-- omp = om paragraf -->
+    <div class="omp">
+        <h2>Skolen</h2><br>
+
+        <!-- info fra https://no.wikipedia.org/wiki/H%C3%B8nefoss_videreg%C3%A5ende_skole -->
+        <p>Hønefoss videregående skole befinner seg i Osloveien på sørsiden av Hønefoss i Ringerike <br> kommune. Skolen har også ansvaret for undervisningen på Ringerike fengsel. <br><br> Skolen er en kombinert videregående skole, og har programområdene elektro og datateknologi (inkludert <br> datateknologi og elektronikk Vg2-3 med studiekompetanse og fordyping i realfag, samt Vg2 drone fra <br> høsten 2023), teknologi- og industrifag, bygg- og anleggsfag, helse- og oppvekstfag (både normalløp <br> og 4-årig løp med studiekompetanse), informasjonsteknologi og medieproduksjon, restaurant- og <br> matfag, frisør, blomster, interiør og eksponeringsdesign, kunst, design og arkitektur <br><br> (studieforberedende), medier og kommunikasjon (studieforberedende), kombinasjonsklasser for <br> språklige minoriteter, studiespesialisering med hverdagslivstrening, allmennfaglig påbygning (også for <br> de som har gjort ferdig fagbrev), samt at skolen har en rekke tilbud for voksne via Opus Ringerike. I <br> tillegg har skolen landslinje for yrkessjåfør. Landslinja ligger på Risesletta (ca 1,5 km nord for <br> Hønefoss, retning Valdres).</p><br>
+        
+        <h2>Info</h2>
+
+        <!-- pre fjerner de vanlige reglene som hindrer at teksten får et linjeskift uten br eller nytt paragraf -->
+        <pre>Rektor Torunn Mathisen</pre>
+        <pre>Klasser    50</pre>
+        <pre>Elever     850</pre>
+        <pre>Ansatte    165</pre>
+    </div>
+
+</main>
+
+
+<footer class="footer">
+    <div class="fcontainer">
+        <div class="frow">
+            
+            <!-- 1....................................................................-->
+            <div class="footer-col">
+
+                <h4>Kontakt oss</h4>
+                <ul class="ful">
+                    <li>
+                        <p>
+                            Telefon
+                            <a class="tel" href="#">31 00 27 00</a>
+                        </p>
+                    </li>
+
+                    <li>
+                        <a class="email" href="mailto:honefossvgs@bfk.no" data-id="31424">
+                            <i class="fas fa-envelope"></i> e-post</a>
+                    </li>
+
+                    <li>
+                        <a href="">Hønefoss videregående skole<br>Postboks 3084<br>3501 Hønefoss</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!-- 2....................................................................-->
+            <div class="footer-col fmiddle">
+
+                <h4>Følg oss</h4>
+                <div class="social-links">
+                    <a class="facebook" href="https://www.facebook.com/honefossvgs/" target="_blank" ><i class="fab fa-facebook-f"></i></a>
+                    <a class="youtube" href="https://www.youtube.com/channel/UCofJxfBGd_EC9cDYQeDxV1g" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+
+                <div class="tt">
+                    <a class="tt-btn btn-1" href="#">Til Toppen</a>
+                </div>
+            </div>
+
+            <!-- 3....................................................................-->
+            <div class="footer-col">
+                <h4>Besøk oss</h4>
+                <ul class="ful">
+
+                    <li>
+                        <a href="">Osloveien 17 _ 3511 Hønefoss</a>
+                    </li>
+
+                    <li> 
+                        <a href="">Mandag–fredag _ kl. 08.00–15.30</a>  
+                    </li>
+
+                    <li>
+                        <iframe title="Et interaktiv kart over Hønefoss videregående skole" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1985.414193823205!2d10.252638776715008!3d60.15732174447132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4641073e8102155d%3A0x4fe03632da0299ba!2sH%C3%B8nefoss%20high%20school!5e0!3m2!1sen!2sno!4v1707325078193!5m2!1sen!2sno" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

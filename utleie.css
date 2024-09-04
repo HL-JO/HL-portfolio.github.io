@@ -1,0 +1,193 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+main {
+  margin-bottom: 2svh;
+}
+
+/* card container */
+.card-contain {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1svh;
+}
+
+/* card form */
+.card {
+  text-align: center;
+  width: 70svh;
+  padding: 10px;
+  margin: 2em 2em;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* images for presentation */
+.card-header {
+  display: block;
+  height: 30svh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 5px 5px;
+}
+
+/* content body */
+.card-body {
+  padding: 16px;
+}
+
+/* card title */
+.card-title {
+  margin-top: 0px;
+  margin-bottom: 8px;
+  font-size: 1.25em;
+}
+
+/* drop down menu with specification */
+.expand-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  font-size: 1.05em;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 4px 4px 0 0;
+}
+
+/* drop down menu table */
+table {
+  width: 100%;
+  border-collapse: separate;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: .90em;
+}
+
+/* icon for å vise at det er en drop down menu */
+ion-icon {
+  float: right;
+  margin-top: 5px;
+}
+
+.expand-btn ion-icon {
+  transition: transform 1s;
+}
+
+.expand-btn.expanded ion-icon {
+  transform: rotate(270deg);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+/* drop down menu innhold */
+.expand-section .utleie-content {
+  background-color: #f9f9f9;
+  padding: 0 5px 5px 5px;
+}
+
+.expand-section .content .tsection {
+  font-weight: bold;
+  padding-top: 3%;
+}
+
+.expand-section .content th {
+  padding-top: 10px;
+}
+
+.expand-section .content td {
+  padding: 5px;  
+  /* border-top: 1px solid #ff0000; */
+  border-bottom: 1px solid #ff0000;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+tr p {
+  margin: 7px 0;
+}
+
+.pdf_link {
+  padding: 5px;
+  color: #ff0000;
+}
+
+.pdf_link:hover {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
+/* send email button */
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-decoration: none;
+  margin-top: 1em;
+  padding: 6px 12px;
+  font-size: 1.2rem;
+}
+
+.email-btn {
+  color: red;
+  border: 2px solid red;
+  border-radius: 10px;
+  transition: 1s ease-out;
+}
+
+.email-btn:hover {
+  color: #f0f0f0;
+  box-shadow: inset 0 -200px 0 0 #ff0101;
+  transition: 1s ease-out;
+}
+
+/* individual card header background images */
+.bilt {
+  background-image: url("bilt.jpeg");
+}
+
+.bmg {
+  background-image: url("bmg.jpeg");
+}
+
+.tipp_henger {
+  background-image: url("tipp_henger.jpeg");
+}
+
+.heng_grav {
+  background-image: url("heng_grav.jpeg");
+}
+
+.skap {
+  background-image: url("skap.jpeg");
+}
+
+.skapmt {
+  background-image: url("skapmt.jpeg");
+}
+
+.emg {
+  background-image: url("emg.jpeg");
+}
+
+.vannskut {
+  background-image: url("vannskuter.jpg");
+}
+
+.dexter {
+background-image: url("dexter.jpeg");
+}

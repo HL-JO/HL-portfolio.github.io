@@ -1,0 +1,48 @@
+.yx-image-cont {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.yx {
+    border-radius: 10px;
+}
+
+.bm-btn {
+    position: absolute;
+    top: 80%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 250px;
+    height: 100px;
+    border: none;
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 255, 255, 0.707);
+    border-radius: 40px;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    transition: ease-out 0.9s;
+    font-size: 30px;
+    outline: none;
+}
+
+
+.bm-btn:hover {
+    box-shadow: inset 300px 0 0 0 #ff0000;
+    transition: ease-out 0.9s;
+    cursor: pointer;
+    border: 5px solid #ffffff;
+    color: rgb(255, 255, 255);
+}
+
+/* media #####........................................................................................................................*/
+    @media (max-width: 767px) {
+        .bm-btn {
+            width: 130px;
+            height: 40px;
+            font-size: 15px;
+        }
+      }
+/* media slutt........................................................................................................................*/

@@ -1,0 +1,97 @@
+main {
+	margin-bottom: 2svh;
+}
+
+.shc {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100svh;
+}
+.shc .sh {
+	position: relative;
+	width: 2200%; /* 100% * 22 images */
+	margin: 0;
+	left: 0;
+	animation: 90s slider infinite;
+	height: 100%; 
+}
+.shc .sh img {
+	width: 4.545%; /* 100 / 22 */
+	float: left;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* 4.545% between each keyframe */
+@keyframes slider {
+	0% {
+		left: 0;
+	}
+	4.55% {
+		left: 0;
+	}
+	9.1% {
+		left: -100%;
+	}
+	13.65% {
+		left: -200%;
+	}
+	18.2% {
+		left: -300%;
+	}
+	22.75% {
+		left: -400%;
+	}
+	27.3% {
+		left: -500%;
+	}
+	31.85% {
+		left: -600%;
+	}
+	36.4% {
+		left: -700%;
+	}
+	40.95% {
+		left: -800%;
+	}
+	45.5% {
+		left: -900%;
+	}
+	50.05% {
+		left: -1000%;
+	}
+	54.6% {
+		left: -1100%;
+	}
+	59.15% {
+		left: -1200%;
+	}
+	63.7% {
+		left: -1300%;
+	}
+	68.25% {
+		left: -1400%;
+	}
+	72.8% {
+		left: -1500%;
+	}
+	77.35% {
+		left: -1600%;
+	}
+	81.9% {
+		left: -1700%;
+	}
+	86.45% {
+		left: -1800%;
+	}
+	91% {
+		left: -1900%;
+	}
+	95.55% {
+		left: -2000%;
+	}
+	100% {
+		left: -2100%;
+	}
+}
